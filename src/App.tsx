@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import CardComment, { TypeScore } from "components/CardComment";
 import InputComment from "components/InputComment";
 import Layout from "components/Layout";
@@ -434,6 +435,7 @@ const App = () => {
     } finally {
       setIsLoading(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -529,13 +531,18 @@ const App = () => {
 
       <div className="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
           Frontend Mentor
         </a>
         . Coded by
         <a
           href="https://www.linkedin.com/in/wahyu-fatur-rizky/"
           target="_blank"
+          rel="noreferrer"
         >
           {" "}
           Wahyu Fatur Rizki

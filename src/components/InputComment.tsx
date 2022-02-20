@@ -1,13 +1,10 @@
-import {
-  CommentListInterface,
-  StateReqBodyCommentInterface,
-} from "interface/Comment";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { StateReqBodyCommentInterface } from "interface/Comment";
 import { UserInterface } from "interface/User";
 import { ColorBaseEnum, ColorBasePrimaryEnum } from "style/Color";
+import "style/InputComment.css";
 import Button from "./Button";
 import InputTextArea from "./InputTextArea";
-
-import "style/InputComment.css";
 
 interface InputCommentInterface {
   data?: UserInterface;

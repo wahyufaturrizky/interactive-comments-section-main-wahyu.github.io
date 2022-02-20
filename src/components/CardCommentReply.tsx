@@ -1,16 +1,16 @@
-import { CommentListInterface, ReplieInterface } from "interface/Comment";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ReplieInterface } from "interface/Comment";
 import moment from "moment";
+import "style/CardCommentReply.css";
 import { ColorBaseEnum, ColorBasePrimaryEnum } from "style/Color";
 import Badge from "./Badge";
+import Button from "./Button";
 import ButtonCounter from "./ButtonCounter";
 import ButtonDelete from "./ButtonDelete";
 import ButtonEdit from "./ButtonEdit";
 import ButtonReply from "./ButtonReply";
-
-import "style/CardCommentReply.css";
-import Button from "./Button";
-import InputTextArea from "./InputTextArea";
 import { TypeScore } from "./CardComment";
+import InputTextArea from "./InputTextArea";
 
 const CardCommentReply = (props: {
   data: ReplieInterface;
