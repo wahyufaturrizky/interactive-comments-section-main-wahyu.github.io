@@ -85,7 +85,9 @@ const App = () => {
   const fetchComments = useCallback(async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/comments");
+      const res = await fetch(
+        "https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments"
+      );
       if (res.status === 200) {
         const response = await res.json();
 
@@ -135,12 +137,15 @@ const App = () => {
           replies: [],
         });
 
-        await fetch("http://localhost:4000/comments", {
-          method: "POST",
-          headers: myHeaders,
-          body: reqBody,
-          redirect: "follow",
-        });
+        await fetch(
+          "https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments",
+          {
+            method: "POST",
+            headers: myHeaders,
+            body: reqBody,
+            redirect: "follow",
+          }
+        );
       } catch (error) {
         window.alert(error);
         setIsLoading(false);
@@ -174,12 +179,15 @@ const App = () => {
             : (dataUpdateScoreUser.score || 0) - 1,
       });
 
-      await fetch(`http://localhost:4000/comments/${dataUpdateScoreUser.id}`, {
-        method: "PATCH",
-        headers: myHeaders,
-        body: reqBody,
-        redirect: "follow",
-      });
+      await fetch(
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${dataUpdateScoreUser.id}`,
+        {
+          method: "PATCH",
+          headers: myHeaders,
+          body: reqBody,
+          redirect: "follow",
+        }
+      );
     } catch (error) {
       window.alert(error);
       setIsLoading(false);
@@ -222,12 +230,15 @@ const App = () => {
         replies: tempUpdateContenReply,
       });
 
-      await fetch(`http://localhost:4000/comments/${tempComment?.id}`, {
-        method: "PATCH",
-        headers: myHeaders,
-        body: reqBody,
-        redirect: "follow",
-      });
+      await fetch(
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${tempComment?.id}`,
+        {
+          method: "PATCH",
+          headers: myHeaders,
+          body: reqBody,
+          redirect: "follow",
+        }
+      );
     } catch (error) {
       window.alert(error);
       setIsLoading(false);
@@ -250,7 +261,7 @@ const App = () => {
       });
 
       await fetch(
-        `http://localhost:4000/comments/${dataUpdateCommentUser.id}`,
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${dataUpdateCommentUser.id}`,
         {
           method: "PATCH",
           headers: myHeaders,
@@ -293,12 +304,15 @@ const App = () => {
         replies: tempUpdateContenReply,
       });
 
-      await fetch(`http://localhost:4000/comments/${tempComment?.id}`, {
-        method: "PATCH",
-        headers: myHeaders,
-        body: reqBody,
-        redirect: "follow",
-      });
+      await fetch(
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${tempComment?.id}`,
+        {
+          method: "PATCH",
+          headers: myHeaders,
+          body: reqBody,
+          redirect: "follow",
+        }
+      );
     } catch (error) {
       window.alert(error);
       setIsLoading(false);
@@ -342,7 +356,7 @@ const App = () => {
       });
 
       await fetch(
-        `http://localhost:4000/comments/${dataUpdateCommentReply.id}`,
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${dataUpdateCommentReply.id}`,
         {
           method: "PATCH",
           headers: myHeaders,
@@ -376,12 +390,15 @@ const App = () => {
         replies: tempDeleteReply,
       });
 
-      await fetch(`http://localhost:4000/comments/${tempComment?.id}`, {
-        method: "PATCH",
-        headers: myHeaders,
-        body: reqBody,
-        redirect: "follow",
-      });
+      await fetch(
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${tempComment?.id}`,
+        {
+          method: "PATCH",
+          headers: myHeaders,
+          body: reqBody,
+          redirect: "follow",
+        }
+      );
     } catch (error) {
       setstateModal({ ...stateModal, isVisible: false });
       window.alert(error);
@@ -399,11 +416,14 @@ const App = () => {
       let myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
-      await fetch(`http://localhost:4000/comments/${dataModal?.id}`, {
-        method: "DELETE",
-        headers: myHeaders,
-        redirect: "follow",
-      });
+      await fetch(
+        `https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/comments/${dataModal?.id}`,
+        {
+          method: "DELETE",
+          headers: myHeaders,
+          redirect: "follow",
+        }
+      );
     } catch (error) {
       setstateModal({ ...stateModal, isVisible: false });
       window.alert(error);
@@ -417,7 +437,9 @@ const App = () => {
   const fetchUser = useCallback(async () => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/currentUser");
+      const res = await fetch(
+        "https://my-json-server.typicode.com/wahyufaturrizky/server-mock-frontend-mentor-comment-wahyu/currentUser"
+      );
       if (res.status === 200) {
         const response = await res.json();
         setStateReqBodyComment({
