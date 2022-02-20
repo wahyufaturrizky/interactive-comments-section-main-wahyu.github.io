@@ -1,0 +1,41 @@
+.container-input-comment {
+  margin-left: 16px;
+}
+
+.container-send-button {
+  margin-left: 16px;
+}
+
+.container-input-component {
+  background-color: hsl(0, 0%, 100%);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.is-mobile-input-component {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .container-avatar {
+    display: none;
+  }
+
+  .container-input-comment {
+    margin-left: 0px;
+  }
+
+  .container-send-button {
+    display: none;
+  }
+
+  .container-input-component {
+    padding: 16px;
+  }
+
+  .is-mobile-input-component {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+}

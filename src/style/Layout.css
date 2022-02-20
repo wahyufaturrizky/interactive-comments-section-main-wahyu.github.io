@@ -1,0 +1,11 @@
+.container-layout {
+  padding-top: 56px;
+  height: auto;
+  background-color: hsl(223, 19%, 93%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container-layout {
+    padding-top: 1px;
+  }
+}
